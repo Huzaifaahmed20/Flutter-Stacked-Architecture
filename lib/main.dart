@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stacked_architecture_practice/app/locator.dart';
 import 'package:flutter_stacked_architecture_practice/app/router.gr.dart';
+import 'package:flutter_stacked_architecture_practice/ui/future_example_view.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: Routes.startupViewRoute,
+      home: FutureExampleView(),
+      // initialRoute: Routes.startupViewRoute,
       onGenerateRoute: Router().onGenerateRoute,
       navigatorKey: locator<NavigationService>().navigatorKey,
     );
