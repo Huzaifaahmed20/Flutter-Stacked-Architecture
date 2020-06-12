@@ -6,6 +6,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
+      onModelReady: (model) => model.getParams(context),
       builder: (context, model, child) => Scaffold(
         floatingActionButton: FloatingActionButton(onPressed: model.updateCounter),
         body: Center(
